@@ -3,95 +3,102 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>GitHub README Generator</title>
+    <title>[Your Name]'s Profile</title>
     <style>
         body {
             font-family: Arial, sans-serif;
             margin: 20px;
+            background-color: #f4f4f4;
+            color: #333;
         }
-        textarea {
-            width: 100%;
-            height: 300px;
-            margin-bottom: 10px;
+        header {
+            text-align: center;
+            padding: 20px;
+            background-color: #007bff;
+            color: #fff;
+        }
+        main {
+            max-width: 800px;
+            margin: 0 auto;
+        }
+        h1, h2, h3 {
+            color: #007bff;
+        }
+        p {
+            line-height: 1.6;
+        }
+        ul {
+            list-style-type: none;
+            padding: 0;
+        }
+        li {
+            margin-bottom: 5px;
+        }
+        .contact-info {
+            margin-top: 20px;
+        }
+        footer {
+            text-align: center;
+            margin-top: 50px;
+            padding: 20px;
+            background-color: #007bff;
+            color: #fff;
         }
     </style>
 </head>
 <body>
-    <h1>GitHub README Generator</h1>
-    <form onsubmit="generateReadme(); return false;">
-        <label for="fullName">Your Full Name:</label>
-        <input type="text" id="fullName" required>
-        
-        <label for="contactInfo">Your Contact Information:</label>
-        <input type="text" id="contactInfo" required>
+    <header>
+        <h1>[Your Name]</h1>
+        <p>[Your Job Title | Passion | Slogan]</p>
+    </header>
 
-        <label for="summary">Summary:</label>
-        <textarea id="summary" required></textarea>
+    <main>
+        <section>
+            <h2>About Me</h2>
+            <p>
+                Hello! I'm [Your Name], [Your Job Title] with a passion for [Your Interests]. I have [X] years of experience in [Your Industry] and specialize in [Your Skills].
+            </p>
+        </section>
 
-        <label for="experience">Experience:</label>
-        <textarea id="experience" required></textarea>
+        <section>
+            <h2>Experience</h2>
+            <ul>
+                <li><strong>[Job Title]</strong> at [Company] | [Location] | [Date Range]</li>
+                <li>[Brief description of your role and achievements]</li>
+                <!-- Repeat for each job experience -->
+            </ul>
+        </section>
 
-        <label for="skills">Technical Skills:</label>
-        <textarea id="skills" required></textarea>
+        <section>
+            <h2>Education</h2>
+            <ul>
+                <li><strong>[Degree] in [Field]</strong> | [University] | [Year]</li>
+                <li>[Additional details about your academic background]</li>
+                <!-- Repeat for each educational experience -->
+            </ul>
+        </section>
 
-        <label for="education">Education:</label>
-        <textarea id="education" required></textarea>
+        <section>
+            <h2>Skills</h2>
+            <ul>
+                <li>[Skill 1]</li>
+                <li>[Skill 2]</li>
+                <li>[Skill 3]</li>
+                <!-- Add more skills as needed -->
+            </ul>
+        </section>
 
-        <label for="certifications">Certifications:</label>
-        <textarea id="certifications" required></textarea>
+        <section class="contact-info">
+            <h2>Contact Information</h2>
+            <p>Email: [Your Email]</p>
+            <p>LinkedIn: [Your LinkedIn Profile]</p>
+            <p>GitHub: [Your GitHub Profile]</p>
+            <!-- Add more contact information as needed -->
+        </section>
+    </main>
 
-        <label for="projects">Projects:</label>
-        <textarea id="projects" required></textarea>
-
-        <label for="memberships">Professional Memberships:</label>
-        <textarea id="memberships" required></textarea>
-
-        <input type="submit" value="Generate README">
-    </form>
-
-    <h2>Generated README Preview:</h2>
-    <div id="readmePreview"></div>
-
-    <script>
-        function generateReadme() {
-            const fullName = document.getElementById('fullName').value;
-            const contactInfo = document.getElementById('contactInfo').value;
-            const summary = document.getElementById('summary').value;
-            const experience = document.getElementById('experience').value;
-            const skills = document.getElementById('skills').value;
-            const education = document.getElementById('education').value;
-            const certifications = document.getElementById('certifications').value;
-            const projects = document.getElementById('projects').value;
-            const memberships = document.getElementById('memberships').value;
-
-            const readmeContent = `
-# ${fullName}
-${contactInfo}
-
-## Summary
-${summary}
-
-## Experience
-${experience}
-
-## Technical Skills
-${skills}
-
-## Education
-${education}
-
-## Certifications
-${certifications}
-
-## Projects
-${projects}
-
-## Professional Memberships
-${memberships}
-            `;
-
-            document.getElementById('readmePreview').innerText = readmeContent;
-        }
-    </script>
+    <footer>
+        <p>Connect with me and let's build something great together!</p>
+    </footer>
 </body>
 </html>
